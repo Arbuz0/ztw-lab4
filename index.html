@@ -45,13 +45,22 @@
           <!-- Left links -->
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#">Dashboard</a>
+              <a class="nav-link" href="#intro">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Team</a>
+              <a class="nav-link" href="#lastTravels">Podróże</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Projects</a>
+              <a class="nav-link" href="#contact">Kontakt</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#map">Mapa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#team">Zespół</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faq">FAQ</a>
             </li>
           </ul>
           <!-- Left links -->
@@ -191,33 +200,35 @@
       <!--Section: LastTravels-->
 
       <section id="contact" class="p-5">
-        <h2 class="mb-5 text-center">Kontakt</h2>
-        <form>
-          <div class="form-outline mb-4">
-            <input type="text" id="name" class="form-control" />
-            <label class="form-label" for="name">Imię</label>
-          </div>
-          <div class="form-outline mb-4">
-            <input type="email" id="email" class="form-control" />
-            <label class="form-label" for="email">Email</label>
-          </div>
-          <div class="form-outline mb-4">
-            <textarea class="form-control" id="message" rows="4"></textarea>
-            <label class="form-label" for="message">Wiadomość</label>
-          </div>
-          <button type="submit" class="btn btn-primary btn-block mb-4">Wyślij</button>
-        </form>
+        <div class="container">
+          <h2 class="mb-5 text-center">Kontakt</h2>
+          <form>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="name" placeholder="Imię">
+              <label for="name">Imię</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="email" placeholder="Email">
+              <label for="email">Email</label>
+            </div>
+            <div class="form-floating mb-3">
+              <textarea class="form-control" placeholder="Wiadomość" id="message" style="height: 100px;"></textarea>
+              <label for="message">Wiadomość</label>
+            </div>
+            <button type="submit" class="btn btn-primary mb-4">Wyślij</button>
+          </form>
+        </div>
       </section>
 
-      <section id="gallery" class="text-center p-5">
+      <section id="map" class="text-center p-5">
         <h2 class="mb-5">Znajdź nas na mapie</h2>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.614080304829!2d-0.12762508423095995!3d51.50735047963629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604cb8780d91f%3A0x64b5b3d70c466331!2sBig%20Ben!5e0!3m2!1spl!2spl!4v1581093893984!5m2!1spl!2spl"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2503.685593133504!2d17.032668715964424!3d51.1089776795758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fc28b5f015baf%3A0x4e098bf9d22668e6!2sWroc%C5%82aw!5e0!3m2!1spl!2spl!4v1581093893984!5m2!1spl!2spl"
           width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
       </section>
 
 
-      <section class="p-5">
+      <section id="three-to-one" class="p-5">
         <div class="row">
           <div class="col-md-3">
             <img src="img/trip1.jpg" class="img-fluid" alt="">
@@ -230,7 +241,7 @@
       </section>
 
 
-      <section class="bg-light text-center p-5">
+      <section id="citation" class="bg-light text-center p-5">
         <div class="container">
           <figure class="text-center">
             <blockquote class="blockquote">
@@ -242,7 +253,7 @@
           </figure>
         </div>
       </section>
-      
+
 
       <section id="team" class="text-center p-5">
         <h2 class="mb-5">Nasz zespół</h2>
@@ -262,7 +273,8 @@
                 <img src="img/team2.jpg" class="card-img-top" alt="Zdjęcie pracownika">
                 <div class="card-body">
                   <h5 class="card-title">Anna Nowak</h5>
-                  <p class="card-text">Ekspertka od egzotycznych destynacji. Zawsze znajdzie dla Ciebie idealne miejsce.</p>
+                  <p class="card-text">Ekspertka od egzotycznych destynacji. Zawsze znajdzie dla Ciebie idealne miejsce.
+                  </p>
                 </div>
               </div>
             </div>
@@ -286,7 +298,7 @@
           </button>
         </div>
       </section>
-      
+
 
 
       <section id="faq" class="p-5">
@@ -330,7 +342,7 @@
 
 
 
-      <section class="p-5">
+      <section id="graph" class="p-5">
         <h2 class="mb-5 text-center">Najpopularniejsze kierunki podróży</h2>
         <div class="container">
           <canvas id="myChart"></canvas>
