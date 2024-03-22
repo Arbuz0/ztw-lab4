@@ -15,80 +15,73 @@
   <!-- MDB -->
   <link rel="stylesheet" href="css/mdb.min.css" />
   <link rel="stylesheet" href="css/styles.css" />
-  <!--Navbar-->
-  <nav class="navbar navbar-expand-lg navbar-dark primary-color fixed-top">
-    <div class="container">
-      <!-- Navbar brand -->
-      <a class="navbar-brand" href="#">Navbar</a>
-      <!-- Collapse button -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" datatarget="#basicExampleNav"
-        aria-controls="basicExampleNav" aria-expanded="false" arialabel="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- Collapsible content -->
-      <div class="collapse navbar-collapse" id="basicExampleNav">
-        <!-- Links -->
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <!-- Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" datatoggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">Dropdown</a>
-            <div class="dropdown-menu dropdown-primary" arialabelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-        </ul>
-        <!-- Links -->
-        <form class="form-inline">
-          <div class="md-form my-0">
-            <input class="form-control mr-sm2" type="text" placeholder="Search" aria-label="Search">
-          </div>
-        </form>
-      </div>
-      <!-- Collapsible content -->
-    </div>
-  </nav>
-  <!--/.Navbar-->
-  <!--Mask-->
-  <div id="intro" class="view">
-    <div class="mask rgba-stylish-strong">
-      <div class="container-fluid d-flex align-items-center justify-contentcenter h-100">
-        <div class="row d-flex justify-content-center text-center">
-          <div class="col-md-10">
-            <!-- Heading -->
-            <h2 class="display-4 font-weight-bold white-text pt-5 mb-2">Podróżowanie</h2>
-            <!-- Divider -->
-            <hr class="hr-light">
-            <!-- Description -->
-            <h4 class="white-text my4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti consequuntu
-              r.</h4>
-            <button type="button" class="btn btn-outlinewhite">Dowiedz się więcej<i
-                class="fas fa-book ml-2"></i></button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--/.Mask-->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
   <!-- Start your project here-->
   <!--Main Navigation-->
   <header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary fixed-top">
+      <!-- Container wrapper -->
+      <div class="container-fluid">
+        <!-- Toggle button -->
+        <button data-mdb-collapse-init class="navbar-toggler" type="button" data-mdb-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Navbar brand -->
+          <a class="navbar-brand mt-2 mt-lg-0" href="#">
+            <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="15" alt="MDB Logo"
+              loading="lazy" />
+          </a>
+          <!-- Left links -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Projects</a>
+            </li>
+          </ul>
+          <!-- Left links -->
+        </div>
+        <!-- Collapsible wrapper -->
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+    <!--Mask-->
+    <div id="intro" class="view">
+    </div>
+    <div class="mask " style="background-color: hsla(0, 0%, 0%, 0.6)">
+      <div class="container-fluid d-flex align-items-center justify-content-center vh-100">
+        <div class="row d-flex justify-content-center text-center">
+          <div class="col-md-10">
+            <!-- Heading -->
+            <h2 class="display-4 fw-bold text-white pt-5 mb-2">Podróżowanie</h2>
+            <!-- Divider -->
+            <hr class="text-white">
+            <!-- Description -->
+            <h4 class="text-white my-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti
+              consequuntur.</h4>
+            <button type="button" class="btn btn-outline-light">Dowiedz się więcej<i
+                class="fas fa-book ms-2"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/.Mask-->
   </header>
   <!--Main Navigation-->
   <!--Main layout-->
@@ -197,16 +190,155 @@
       </section>
       <!--Section: LastTravels-->
 
-      <hr class="my-5">
-      <!--Section: Gallery-->
-      <section id="gallery">
+      <section id="contact" class="p-5">
+        <h2 class="mb-5 text-center">Kontakt</h2>
+        <form>
+          <div class="form-outline mb-4">
+            <input type="text" id="name" class="form-control" />
+            <label class="form-label" for="name">Imię</label>
+          </div>
+          <div class="form-outline mb-4">
+            <input type="email" id="email" class="form-control" />
+            <label class="form-label" for="email">Email</label>
+          </div>
+          <div class="form-outline mb-4">
+            <textarea class="form-control" id="message" rows="4"></textarea>
+            <label class="form-label" for="message">Wiadomość</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block mb-4">Wyślij</button>
+        </form>
       </section>
-      <!--Section: Gallery-->
-      <hr class="my-5">
-      <!--Section: Contact-->
-      <section id="contact">
+
+      <section id="gallery" class="text-center p-5">
+        <h2 class="mb-5">Znajdź nas na mapie</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.614080304829!2d-0.12762508423095995!3d51.50735047963629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604cb8780d91f%3A0x64b5b3d70c466331!2sBig%20Ben!5e0!3m2!1spl!2spl!4v1581093893984!5m2!1spl!2spl"
+          width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
       </section>
-      <!--Section: Contact-->
+
+
+      <section class="p-5">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="img/trip1.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-9">
+            <h2>Odkryj z nami świat!</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="bg-light text-center p-5">
+        <div class="container">
+          <figure class="text-center">
+            <blockquote class="blockquote">
+              <p>"Podróżowanie – to jedyna rzecz na którą wydajesz pieniądze, a stajesz się bogatszy."</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+              Anonim <cite title="Source Title">w podróży</cite>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      
+
+      <section id="team" class="text-center p-5">
+        <h2 class="mb-5">Nasz zespół</h2>
+        <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="card" style="width: 18rem; margin: auto;">
+                <img src="img/team1.jpg" class="card-img-top" alt="Zdjęcie pracownika">
+                <div class="card-body">
+                  <h5 class="card-title">Jan Kowalski</h5>
+                  <p class="card-text">Specjalista ds. podróży. Pasjonat wielkich przygód i niezapomnianych wrażeń.</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card" style="width: 18rem; margin: auto;">
+                <img src="img/team2.jpg" class="card-img-top" alt="Zdjęcie pracownika">
+                <div class="card-body">
+                  <h5 class="card-title">Anna Nowak</h5>
+                  <p class="card-text">Ekspertka od egzotycznych destynacji. Zawsze znajdzie dla Ciebie idealne miejsce.</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card" style="width: 18rem; margin: auto;">
+                <img src="img/team3.jpg" class="card-img-top" alt="Zdjęcie pracownika">
+                <div class="card-body">
+                  <h5 class="card-title">Marcin Zalewski</h5>
+                  <p class="card-text">Miłośnik górskich wypraw. Pomoże Ci przygotować się na każdą przygodę.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#teamCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Poprzedni</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#teamCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Następny</span>
+          </button>
+        </div>
+      </section>
+      
+
+
+      <section id="faq" class="p-5">
+        <h2 class="mb-5 text-center">FAQ - Najczęściej zadawane pytania</h2>
+        <div class="accordion" id="accordionExample">
+          <!-- Pierwsze pytanie -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+                Jakie dokumenty są potrzebne do wyjazdu zagranicznego?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+              </div>
+            </div>
+          </div>
+          <!-- Drugie pytanie -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Czy potrzebuję ubezpieczenia na podróż zagraniczną?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section class="p-5">
+        <h2 class="mb-5 text-center">Najpopularniejsze kierunki podróży</h2>
+        <div class="container">
+          <canvas id="myChart"></canvas>
+        </div>
+      </section>
+
+
+
     </div>
   </main>
 
@@ -221,6 +353,42 @@
   <script type="text/javascript" src="js/mdb.umd.min.js"></script>
   <!-- Custom scripts -->
   <script type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Azja', 'Europa', 'Afryka', 'Ameryki', 'Australia'],
+        datasets: [{
+          label: 'Popularność',
+          data: [12, 19, 3, 5, 2, 3],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
 </body>
 
 </html>
